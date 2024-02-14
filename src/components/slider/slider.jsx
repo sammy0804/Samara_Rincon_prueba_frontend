@@ -18,17 +18,11 @@ const CardSlider = ({ cards }) => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3
+          slidesToShow: 2
         }
       },
       {
         breakpoint: 768,
-        settings: {
-          slidesToShow: 1
-        }
-      },
-      {
-        breakpoint: 320,
         settings: {
           slidesToShow: 1
         }

@@ -3,6 +3,7 @@ import React from 'react';
 import Navbar from './components/header/Header'; 
 import Slider from './components/slider/Slider';
 import Form from './components/form/Form';
+import Footer from './components/footer/Footer'
 import cardData from './data/CardData'; // Data
 import './App.css'; // estilos globales
 
@@ -12,6 +13,7 @@ function App() {
       <Navbar />
       <Slider cards={cardData} />
       <Form />
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,85 @@
+.grid-footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+  .footer {
+    color: #fff; /* White text color */
+    padding: 20px;
+    text-align: center; /* Center align the text */
+  }
+  
+  .footer-section {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .footer-section h1 {
+    margin-bottom: 10px; /* Spacing between the title and the paragraph */
+  }
+  
+  .footer-section p {
+    margin-bottom: 10px; /* Spacing between paragraph and next section */
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid #fff; /* White top border for bottom section */
+    padding-top: 20px; /* Spacing above the border */
+  }
+  
+  .footer-bottom p {
+    font-size: 0.8rem; /* Smaller font size for the bottom text */
+  }
+  
+  .footer-bottom a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .footer-bottom a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+
+  @media (max-width: 1024px) { /* Tablet */
+    .footer {
+      padding: 20px 10px; /* Reduced padding */
+      margin: 20px 10%;
+    }
+
+    .grid-footer{
+        grid-template-columns: repeat(2, 1fr); 
+    }
+  
+    .footer-section h3,
+    .footer-section p,
+    .footer-bottom p {
+      font-size: 0.9rem; /* Adjust font size for better readability */
+    }
+  }
+  
+  @media (max-width: 768px) { /* Mobile */
+    .footer {
+      padding: 15px 5px; /* Further reduced padding */
+    }
+    
+    .grid-footer{
+        grid-template-columns: 1fr; 
+    }
+
+    .footer-section {
+      margin-bottom: 15px; /* Reduced spacing between sections */
+    }
+  
+    .footer-section h3,
+    .footer-section p,
+    .footer-bottom p {
+      font-size: 0.8rem; /* Smaller font size for smaller screens */
+    }
+  
+    .footer-bottom {
+      padding-top: 15px; /* Adjust padding above the border */
+    }
+  }
+  

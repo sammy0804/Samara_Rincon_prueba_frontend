@@ -10,7 +10,6 @@
 /* Form */
 .form-container {
     padding: 20px 0px;
-    max-width: 500px;
     margin: 30px;
     color: #0C1726;
     font-weight: bold;
@@ -63,7 +62,7 @@
   
   /* Radio and checkbox */
   .select-container, .multiselect-container {
-    margin: 0px 10%;
+    margin: 10px 10%;
   }
 
   .checkbox-group, .radio-group{
@@ -130,5 +129,29 @@
   
   .submit-button:hover {
     background-color: #4a6fa5;
+  }
+
+  /* Responsive styles */
+@media (max-width: 1024px) { /* Tablet */
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr); /* Stack the containers */
+    }
+
+    .form-container{
+      padding: 15px 5px; 
+    }
+  }
+  
+  @media (max-width: 768px) { /* Mobile */
+    .grid-container {
+      grid-template-columns: 1fr; /* Stack the containers */
+    }
+    
+    .input-group input[type="text"],
+    .input-group input[type="email"],
+    .input-group textarea,
+    .submit-button {
+      padding: 15px; /* Larger padding for easier touch */
+    }
   }
   
