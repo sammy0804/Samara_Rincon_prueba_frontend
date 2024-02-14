@@ -1,30 +1,13 @@
+import Slider from 'react-slick';
+import Card from './Card';
+
+//styles slide
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
-import "../../styles/Slider.css"
-import Slider from 'react-slick';
-import Card from './card';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import "../../styles/slider.css"
 
 const CardSlider = ({ cards }) => {
-  // Previous Arrow
-  const PrevArrow = ({ onClick }) => {
-    return (
-      <div className="slick-arrow slick-prev" onClick={onClick}>
-        <FontAwesomeIcon icon={faChevronLeft} />
-      </div>
-    );
-  };
-
-  // Next Arrow
-  const NextArrow = ({ onClick }) => {
-    return (
-      <div className="slick-arrow slick-next" onClick={onClick}>
-        <FontAwesomeIcon icon={faChevronRight} />
-      </div>
-    );
-  };
-
+ 
   const settings = {
     dots: true,
     infinite: true,
@@ -43,10 +26,14 @@ const CardSlider = ({ cards }) => {
         settings: {
           slidesToShow: 1
         }
+      },
+      {
+        breakpoint: 320,
+        settings: {
+          slidesToShow: 1
+        }
       }
-    ],
-    prevArrow: <PrevArrow />,
-    nextArrow: <NextArrow />,
+    ]
   };
 
   return (

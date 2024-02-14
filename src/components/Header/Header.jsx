@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Navbar from './Navbar';
-import "../../styles/Navbar.css"
+import "../../styles/navbar.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
 

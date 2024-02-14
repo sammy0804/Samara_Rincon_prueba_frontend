@@ -1,0 +1,134 @@
+/* Grid */
+.grid-container{
+    display: grid;
+    background-color: #8C8377;
+    grid-template-columns: 3fr 3fr 3fr;
+    gap: 16px;
+    align-items: center;
+}
+
+/* Form */
+.form-container {
+    padding: 20px 0px;
+    max-width: 500px;
+    margin: 30px;
+    color: #0C1726;
+    font-weight: bold;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
+  .input-group input[type="text"],
+  .input-group input[type="email"] {
+    width: 95%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #0C1726;
+    background-color: #FFF;
+    color: #0C1726;
+  }
+
+  .input-group select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #0C1726;
+    background-color: #FFF;
+    color: #0C1726;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .input-group textarea{
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #0C1726;
+    background-color: #0C1726;
+    color: #FFF;
+  }
+  
+  .input-group textarea {
+    resize: vertical; /* Allows vertical resizing */
+  }
+  
+  /* Radio and checkbox */
+  .select-container, .multiselect-container {
+    margin: 0px 10%;
+  }
+
+  .checkbox-group, .radio-group{
+    background-color: #0C1726;
+    border-radius: 0.8rem;
+    padding: 20px;
+    color: #FFF;
+  }
+
+  .checkbox-group label {
+    display: block;
+    position: relative;
+    padding-left: 45px;
+    margin: 20px 8px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .radio-group label{
+    display: block;
+    position: relative;
+    padding-left: 35%;
+    margin: 33px 8px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .checkbox-group input[type="checkbox"],
+  .radio-group input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkbox-group label::before,
+  .radio-group label::before {
+    content: "";
+    position: absolute;
+    border: 1px solid #0C1726;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #FFF;
+    border-radius: 4px; /* Circle for radio, square for checkbox */
+  }
+  
+  .radio-group label::before {
+    border-radius: 50%;
+  }
+  
+  .submit-button {
+    background-color: #3C5973;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 45%;
+  }
+  
+  .submit-button:hover {
+    background-color: #4a6fa5;
+  }
+  

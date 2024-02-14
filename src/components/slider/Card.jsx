@@ -1,7 +1,5 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlayCircle } from '@fortawesome/free-solid-svg-icons';
-import "../../styles/Slider.css"
+import "../../styles/slider.css"
 
 const Card = ({ img, title, content }) => {
   return (
