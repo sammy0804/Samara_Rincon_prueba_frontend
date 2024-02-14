@@ -1,0 +1,105 @@
+/* card */
+.card {
+    background-color: #3C5973;
+    color: #fff;
+    padding: 20px;
+    margin: 25px;
+    border-radius: 10px;
+    text-align: center;
+    display: grid;
+  }
+  
+  .card-image {
+    background-color: #e0e0e0; /* Placeholder background color */
+    border-radius: 50%; /* Creates a circle */
+    width: 150px; /* Width of the circle */
+    height: 150px; /* Height of the circle, must be equal to width for a perfect circle */
+    margin: 20px auto; /* Centers the circle horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* If you want to include an X as in your image, you could use a ::before pseudo-element */
+  .card-image::before {
+    content: 'X'; /* The content of the pseudo-element */
+    color: #0C1726; /* Text color */
+    font-size: 6rem; /* Size of the X */
+  }
+  
+  .card-body h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #0C1726;
+  }
+  
+  .card p {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    text-align: left;
+  }
+  
+  /* slider */
+  .slider-container {
+    margin: 0 auto; /* Centers the slider */
+    padding: 0 35px; /* Adds padding to prevent arrows from overflowing */
+    overflow: hidden; /* Hides anything that overflows the container */
+    max-width: 100%;
+    background-color: #fff;
+  }
+  
+  /* Slider arrow styles */
+  .slick-prev, .slick-next {
+    z-index: 1; 
+    background-color: #FFF;
+    border-radius: 50%;
+    font-size: larger;
+    width: 40px;
+    height: 40px;
+  }
+
+  .slick-prev:before, .slick-next:before {
+    font-size: 40px;
+    color: #0C1726;
+    border-radius: 50%;
+    opacity: none;
+  }
+
+  .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+    color: transparent; 
+    outline: none;
+    background: none; 
+}
+  
+  /* You might need to adjust the position of arrows if they're still overflowing */
+  .slick-prev {
+    left: -25px; /* Adjust as necessary */
+  }
+  
+  .slick-next {
+    right: -25px; /* Adjust as necessary */
+  }
+  
+  /* Slider responsive adjustments */
+  @media (max-width: 1024px) {
+    .slick-prev {
+      left: 5px; /* Adjust as necessary */
+    }
+  
+    .slick-next {
+      right: 5px; /* Adjust as necessary */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .slick-prev {
+      left: 0px; /* Adjust as necessary */
+    }
+  
+    .slick-next {
+      right: 0px; /* Adjust as necessary */
+    }
+  }
+  
