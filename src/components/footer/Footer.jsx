@@ -2,6 +2,12 @@ import React from 'react';
 import '../../styles/footer.css'; // Make sure this path is correct
 
 const Footer = () => {
+  // Click event handler for the link
+  const handleLinkClick = (e) => {
+    e.preventDefault(); // Prevent the default link behavior
+    console.log('Footer link');
+  };
+
   return (
     <div className="footer">
         <div className="grid-footer">
@@ -19,7 +25,9 @@ const Footer = () => {
             </div>
         </div>
         <div className="footer-bottom">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">Link here</a> Lorem ipsum</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                <a  href="/some-path" onClick={handleLinkClick}>Link here</a> 
+            Lorem ipsum</p>
         </div>
     </div>
   );

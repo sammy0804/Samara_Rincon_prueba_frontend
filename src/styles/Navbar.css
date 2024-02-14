@@ -26,12 +26,42 @@
   font-weight: bold;
 }
 
+.go-there {
+  /* ... existing styles ... */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.go-there:hover {
+  background-color: #4a6fa5;
+  font-weight: bold;
+}
+
+.go-there:active {
+  transform: scale(0.98); /* Slightly scale down the button when clicked */
+}
+
 .fa-circle-play {
   margin-left: 2rem; /* Add some space between the text and the icon */
 }
 
-.animation{
-  background-color: #8C8377;
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animation {
+  /* Create a linear gradient background that will animate */
+  background: linear-gradient(-60deg, #8C8377 50%, #333 50%);
+  background-size: 200% 200%; /* Make the background large enough to allow movement */
+  animation: moveGradient 3s linear infinite; /* Apply the animation */
+  height: auto; /* Adjust the height as needed */
 }
 
 .title-container{
@@ -144,4 +174,47 @@ li .menu-items{
   line-height: 10px;
   padding: 0px 10px;
 }
+
+@media (max-width: 1024px) { /* Tablet */
+  .header {
+    grid-template-columns: 1fr; /* Stack the containers */
+    text-align: center; /* Center text for a stacked layout */
+  }
+
+  .title-container,
+  .select-container,
+  .multiselect-container,
+  .form-container {
+    margin-top: 10%; /* Add some top margin for spacing */
+  }
+
+  .nav-area {
+    justify-content: center; /* Center navbar items */
+  }
+
+  .go-there {
+    justify-content: center; /* Center button text and icon */
+  }
+
+  .animation{
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) { /* Mobile */
+  .header {
+    grid-template-columns: 1fr; /* Stack the containers */
+    text-align: center; /* Center text for a stacked layout */
+  }
+
+  .title-container {
+    margin-top: 5%; /* Remove top margin if it's too much for mobile */
+  }
+
+  .animation{
+    height: 200px;
+  }
+}
+
+
 
