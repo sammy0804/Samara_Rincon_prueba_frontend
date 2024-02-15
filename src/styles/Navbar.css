@@ -81,10 +81,25 @@
 }
 
 /* Menu list styling */
-.menus{
+.menus {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   display: flex;
-  list-style: none;
-  color: #FFF;
+  flex-direction: row; /* Default to horizontal layout */
+}
+
+.navbar .hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.navbar .hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: 0.4s;
 }
 
 /* Menu item positioning and font styling */
@@ -111,7 +126,7 @@
   background-color: transparent;
   cursor: pointer;
   width: 100%;
-  padding: 0.7rem 1rem;
+  padding: 0.8rem 1rem;
 }
 
 /* Hover effect for links and buttons */
@@ -205,6 +220,55 @@ li .menu-items{
   .header {
     grid-template-columns: 1fr; /* Stack the containers */
     text-align: center; /* Center text for a stacked layout */
+  }
+
+  .menus, .dropdown{
+    flex-direction: column; /* Stack menu items vertically on small screens */
+  }
+
+  .navbar .dropdown,
+  .navbar .submenu {
+    flex-direction: column; /* Stack submenu items vertically on small screens */
+  }
+
+  .navbar .hamburger {
+    display: block;
+  }
+
+  .navbar .menus {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar .menus.show {
+    display: flex;
+  }
+
+  /* Add some animation or transition */
+  .navbar .menus.show {
+    animation: slideIn 0.3s forwards;
+  }
+
+  li .menu-items{
+    border-bottom: none;
+    border-right: 2px solid #FFF;
+  }
+
+  .dropdown.dropdown.show li .menu-items{
+    border-bottom: 2px solid #FFF;
+    border-right: none;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   .title-container {
