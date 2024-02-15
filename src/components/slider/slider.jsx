@@ -1,10 +1,11 @@
+import React from 'react';
 import Slider from 'react-slick';
 import Card from './Card';
 
 //styles slide
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css"
-import "../../styles/slider.css"
+import "slick-carousel/slick/slick-theme.css";
+import "../../styles/slider.css";
 
 const CardSlider = ({ cards }) => {
  
