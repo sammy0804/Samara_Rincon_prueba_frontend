@@ -26,7 +26,7 @@ const Footer = () => {
         </div>
         <div className="footer-bottom">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                <a  href="/some-path" onClick={handleLinkClick}>Link here</a> 
+                <a  href="/some-path" onClick={handleLinkClick}> Link here </a> 
             Lorem ipsum</p>
         </div>
     </div>

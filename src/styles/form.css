@@ -75,7 +75,6 @@
   .checkbox-group label {
     display: block;
     position: relative;
-    padding-left: 45px;
     margin: 20px 8px;
     cursor: pointer;
     user-select: none;
@@ -84,36 +83,34 @@
   .radio-group label{
     display: block;
     position: relative;
-    padding-left: 35%;
     margin: 33px 8px;
     cursor: pointer;
     user-select: none;
+  }
+
+  .checkbox-group input[type="checkbox"]:checked, 
+  .radio-group input[type="radio"]:checked {
+    content: "✔"; /* Add checkmark */
+    accent-color: #4a6fa5;
   }
   
   .checkbox-group input[type="checkbox"],
   .radio-group input[type="radio"] {
     position: absolute;
-    opacity: 0;
     cursor: pointer;
-    height: 0;
-    width: 0;
-  }
-  
-  .checkbox-group label::before,
-  .radio-group label::before {
-    content: "";
-    position: absolute;
-    border: 1px solid #0C1726;
-    left: 0;
-    top: 0;
     width: 20px;
     height: 20px;
     background-color: #FFF;
-    border-radius: 4px; /* Circle for radio, square for checkbox */
+    border: 1px solid #0C1726;
   }
-  
-  .radio-group label::before {
-    border-radius: 50%;
+
+
+  .checkbox-group span{
+    margin-left: 40px;
+  }
+
+  .radio-group span{
+    margin-left: 45%;
   }
   
   .submit-button {

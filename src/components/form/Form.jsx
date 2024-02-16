@@ -8,6 +8,9 @@ const Form = () =>{
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
+    const [selectedRadio, setSelectedRadio] = useState([]);
+    const [selected, setSelected] = useState([]);
 
     const dropdownOptions = [
         { value: 'select', label: 'Select' },
@@ -34,14 +37,57 @@ const Form = () =>{
         setMessage('');
     };
 
+    // Handle select changes
+    const handleDropdownChange = (e) => {
+        const value = e.target.value;
+        console.log(`Select is ${value}`);
+        setSelected(value);
+      };
+
+     // Handle checkbox changes
+     const handleCheckboxChange = (e) => {
+        const { value, checked } = e.target;
+        console.log(`Checkbox ${value} is now ${checked ? 'checked' : 'unchecked'}`);
+    
+        setSelectedCheckboxes(prev =>
+            prev.includes(value)
+            ? prev.filter(item => item !== value) // Uncheck
+            : [...prev, value] // Check
+        );
+    };
+
+    // Handle radio changes
+    const handleRadioChange = (e) => {
+        const { value, checked } = e.target;
+        console.log(`radio ${value} is now ${checked ? 'checked' : 'unchecked'}`);
+    
+        setSelectedRadio(prev =>
+            prev.includes(value)
+            ? prev.filter(item => item !== value) // Uncheck
+            : [...prev, value] // Check
+        );
+    };
+
     return(
         <div className="grid-container">
             <div className="select-container">
-                <Dropdown options={dropdownOptions} />
-                <CheckboxGroup options={groupOptions} />
+                <Dropdown 
+                    options={dropdownOptions} 
+                    selectedValue={selected}
+                    onChange={handleDropdownChange}
+                />
+                <CheckboxGroup 
+                    options={groupOptions} 
+                    selectedOptions={selectedCheckboxes} 
+                    onChange={handleCheckboxChange}
+                />
             </div>
             <div className="multiselect-container">
-                <RadioGroup options={groupOptions} />
+                <RadioGroup
+                    options={groupOptions} 
+                    selectedOptions={selectedRadio} 
+                    onChange={handleRadioChange}
+                />
             </div>
             <form className="form-container" onSubmit={handleSubmit}>
                 <div className="input-group">

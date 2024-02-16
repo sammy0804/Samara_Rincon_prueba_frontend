@@ -1,9 +1,15 @@
-const RadioGroup = ({ options, name}) => {
+const RadioGroup = ({ options, selectedOptions, onChange}) => {
   return (
     <div className="input-group radio-group">
       {options.map((option, index) => (
         <label key={index}>
-          <input type="radio" name={name} value={option.value} /> {option.label}
+          <input 
+            type="radio" 
+            value={option.value} 
+            name={option.value}
+            checked={selectedOptions.includes(option.value)}
+            onChange={onChange}
+          /> <span>{option.label}</span>
         </label>
       ))}
     </div>
